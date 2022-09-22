@@ -14,12 +14,20 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("secret")) {
             return "This is a secret message! The password is admin";
         }
-        if (query.toLowerCase().contains("plus")) {
-            String[] parts = query.split("%20");
-            return Integer.toString(Integer.parseInt(parts[2]) + Integer.parseInt(parts[4]));
+        else if (query.toLowerCase().contains("plus")) {
+            String[] parts = query.split(" ");
+            
+            String result = Integer.toString(Integer.parseInt(parts[2]) + Integer.parseInt(parts[4]));
+            System.out.println(result);
+            return result;
         }
-        
         // what is 1 plus 1
+        // else if (query.toLowerCase().contains("largest")) {
+        //     String[] parts = query.split("%20");
+        //     return Integer.toString(Integer.parseInt(parts[]) + Integer.parseInt(parts[4]));
+        // }
+        // which of the following numbers is the largest: 375, 51
+        
         return "";
     }
 }

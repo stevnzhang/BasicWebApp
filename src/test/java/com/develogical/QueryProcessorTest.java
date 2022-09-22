@@ -35,6 +35,11 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("secret message"), containsString("admin"));
     }
 
+    @Test
+    public void test123() throws Exception {
+        assertThat(queryProcessor.process("what is 1 plus 1"), containsString("2"));
+    }
+
     // Will break
     // @Test
     // public void breakCode() throws Exception {
