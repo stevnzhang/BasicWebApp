@@ -9,7 +9,7 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
         if (query.toLowerCase().contains("name")) {
-            return "MyTeam";
+            return "SZ-Team";
         }
         else if (query.toLowerCase().contains("secret")) {
             return "This is a secret message! The password is admin";
