@@ -35,4 +35,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("secret message"), containsString("admin"));
     }
 
+    // Will break
+    @Test
+    public void breakCode() throws Exception {
+        assertThat(queryProcessor.process("code no longer works!"), containsString("break!"));
+    }
+
 }
