@@ -40,6 +40,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is 1 plus 1"), containsString("2"));
     }
 
+    @Test
+    public void test12345() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is the largest: 375, 51"), containsString("375"));
+    }
     // Will break
     // @Test
     // public void breakCode() throws Exception {
