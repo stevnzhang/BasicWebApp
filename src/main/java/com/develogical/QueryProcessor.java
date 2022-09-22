@@ -11,6 +11,9 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("name")) {
             return "MyTeam";
         }
+        else if (query.toLowerCase().contains("secret")) {
+            return "This is a secret message! The password is admin";
+        }
         return "";
     }
 }
