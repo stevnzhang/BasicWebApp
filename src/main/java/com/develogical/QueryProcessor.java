@@ -14,6 +14,12 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("secret")) {
             return "This is a secret message! The password is admin";
         }
+        if (query.toLowerCase().contains("plus")) {
+            String[] parts = query.split("%20");
+            return Integer.toString(Integer.parseInt(parts[2]) + Integer.parseInt(parts[4]));
+        }
+        
+        // what is 1 plus 1
         return "";
     }
 }
